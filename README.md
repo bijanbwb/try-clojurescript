@@ -1,10 +1,10 @@
-# try-clojure
+# try-clojurescript
 
-A Clojure library designed to ... well, that part is up to you.
+Test running clojurescript!
 
 ## Usage
 
-FIXME
+http://try-clojurescript.herokuapp.com/
 
 ## License
 
