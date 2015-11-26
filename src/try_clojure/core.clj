@@ -3,7 +3,8 @@
   (:use compojure.core)
   (:require
     [ring.adapter.jetty :as jetty]
-    [clostache.parser :as clostache]))
+    [clostache.parser :as clostache]
+    [compojure.route :as route]))
 
 ; Templates
 (defn read-template [template-name]
@@ -19,7 +20,9 @@
 
 ; Routing
 (defroutes main-routes
-  (GET "/" [] (index)))
+  (GET "/" [] (index))
+  (route/resources "/")
+  (route/not-found "404 Not Found"))
 
 ; Main
 (defn -main []
